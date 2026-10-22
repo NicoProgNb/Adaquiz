@@ -2,7 +2,89 @@
    ADAQUIZ — style.css
 ════════════════════════════════════════════ */
 
+/* Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+
 /* La classe .cache masque un écran */
 .cache {
   display: none;
+}
+
+/* Header */
+
+h1 {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: auto 3rem;
+  padding: 2rem;
+  border: 2px solid darkgrey;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px black;
+}
+
+img {
+  width: 75vw;
+}
+
+/* Uniquement Accueil ? */
+main p:first-of-type {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p:last-of-type {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Footer */
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 5rem;
+}
+
+
+button {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px black;
+}
+
+/* Responsive 1024px */
+@media (width > 1024px) {
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 5rem;
+  }
+
 }
