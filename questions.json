@@ -1,44 +1,62 @@
 [
   {
     "id": 1,
-    "question": "Quel pays a une frontière avec lui-même ?",
-    "reponses": ["L'Afrique du Sud", "Le Vatican", "Le Lesotho", "Saint-Marin"],
+    "réplique": "<<J'ai effectué 96 missions! J'ai été descendu à chaque fois..quand j'y pense j'ai jamais atteri avec mon avion!>>",
+    "reponses": ["Ace Ventura", "Hot Shot", "Y a-t-il un pilote dans l'avion ?"],
     "bonne_reponse": 2
   },
   {
     "id": 2,
-    "question": "Combien de cœurs a une pieuvre ?",
-    "reponses": ["1", "2", "3", "5"],
-    "bonne_reponse": 2
+    "réplique": "<<Si je ne suis pas de retour dans 5 min.. Attendez plus longtemps !>>",
+    "reponses": ["The Mask", "Dogball", "Ace Ventura"],
+    "bonne_reponse": 3
   },
   {
     "id": 3,
-    "question": "Quel est le seul mammifère qui ne peut pas sauter ?",
-    "reponses": ["Le rhinocéros", "L'hippopotame", "L'éléphant", "Le morse"],
+    "question": "<<Meurs, pourriture communiste !>>",
+    "reponses": ["Le Dîner de cons", "La citée de la peur", "OSS 117 Le Cair nid d'espion"],
     "bonne_reponse": 2
   },
   {
     "id": 4,
-    "question": "À quelle vitesse pousse un ongle en moyenne ?",
-    "reponses": ["0,1 mm par jour", "0,3 mm par semaine", "3 mm par mois", "1 cm par mois"],
-    "bonne_reponse": 2
+    "question": "<<J'emmène pas la clocharde ! Ma voiture c'est pas l'arche de Noé !>>",
+    "reponses": ["Le père Noël est une ordure", "Taxi", "Les visiteurs"],
+    "bonne_reponse": 1
   },
   {
     "id": 5,
-    "question": "Quelle est la durée de vie d'un globule rouge ?",
-    "reponses": ["7 jours", "30 jours", "120 jours", "1 an"],
-    "bonne_reponse": 2
+    "question": "<<Mais vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation>>",
+    "reponses": ["Astérix et Obélix: Mission Cléopatre", "Les bronzés", "Les Anges gardiens"],
+    "bonne_reponse": 1
   },
   {
     "id": 6,
-    "question": "Quel animal dort debout et rêve en courant ?",
-    "reponses": ["Le cheval", "La girafe", "Le cheval de mer", "Le lapin"],
-    "bonne_reponse": 0
+    "question": "« Dans quel film on entend cette réplique: Schwing ! »",
+    "reponses": ["Austin Powers", "American Pie", "Wayne's World"],
+    "bonne_reponse": 3
   },
   {
     "id": 7,
-    "question": "Combien de fois par jour bat un cœur humain en moyenne ?",
-    "reponses": ["50 000", "100 000", "200 000", "500 000"],
+    "question": "« Utilisez les petits enfants comme boucliers ! Les ours aiment la viande tendre ! »",
+    "reponses": ["Idiocracy", "Mary à tout prix", "Semi Pro"],
     "bonne_reponse": 1
+  },
+  {
+    "id": 8,
+    "question": "« Est-ce que c’est la merguez ou les pois chiches ? »",
+    "reponses": ["Mary à tout prix", "21 jump street", "Moi Député"],
+    "bonne_reponse": 1
+  }, 
+  {
+    "id": 9,
+    "question": "« Salut Monsieur l'agent ! On a passé une journée de dingue. On était pépères en train de s'occuper de notre baraque quand des étudiants se sont mis à se suicider un peu partout. »",
+    "reponses": ["Le Monde (presque) perdu ", "Tucker & Dale fightent le mal", "shaun of the dead"],
+    "bonne_reponse": 2
+  }, 
+  {
+    "id": 10,
+    "question": "« A- Mais qu'est-ce tu fous ? B- Eh ben, je t'enterre. A- Mais je suis encore en vie ducon. »",
+    "reponses": ["Hot Fuzz", "Daddy's Home", "Frangins malgré eux"],
+    "bonne_reponse": 3
   }
 ]
