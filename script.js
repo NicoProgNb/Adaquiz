@@ -10,6 +10,8 @@
 // Tu n'as pas besoin de les modifier.
 
 const btnCommencer = document.getElementById('btn-commencer')
+const btnSuivant = document.getElementById('btn-suivant')
+const btnRecommencer = document.getElementById('btn-recommencer')
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
 

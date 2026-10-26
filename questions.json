@@ -29,7 +29,7 @@
     "reponses": ["7 jours", "30 jours", "120 jours", "1 an"],
     "bonne_reponse": 2
   },
-  {
+  
     "id": 6,
     "question": "Quel animal dort debout et rêve en courant ?",
     "reponses": ["Le cheval", "La girafe", "Le cheval de mer", "Le lapin"],
