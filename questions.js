@@ -21,7 +21,7 @@ const questions = [
     id: 4,
     question: "<<J'emmène pas la clocharde ! Ma voiture c'est pas l'arche de Noé !>>",
     reponses: ["Le père Noël est une ordure", "Taxi", "Les visiteurs"],
-    bonne_reponse: 0,
+    bonne_reponse: 2,
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const questions = [
     id: 7,
     question: "« Utilisez les petits enfants comme boucliers ! Les ours aiment la viande tendre ! »",
     reponses: ["Idiocracy", "Mary à tout prix", "Semi Pro"],
-    bonne_reponse: 0,
+    bonne_reponse: 2,
   },
   {
     id: 8,
