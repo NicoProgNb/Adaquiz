@@ -12,6 +12,10 @@
 const btnCommencer = document.getElementById('btn-commencer')
 const btnSuivant = document.getElementById('btn-suivant')
 const btnRecommencer = document.getElementById('btn-recommencer')
+const ecranAccueil = document.getElementById('ecran-accueil')
+const ecranQuestion = document.getElementById('ecran-question')
+const ecranResultats = document.getElementById('ecran-resultats')
+
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
 
@@ -48,6 +52,10 @@ const afficher = (ecran) => {
   ecranResultats.classList.add('cache')
   ecran.classList.remove('cache')
 }
+
+btnCommencer.addEventListener("click", () =>{
+  afficher(ecranQuestion)
+})
 
 
 // ════════════════════════════════════════════
