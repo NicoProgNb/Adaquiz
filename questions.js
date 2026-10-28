@@ -1,13 +1,13 @@
 const questions = [
   {
     id: 1,
-    réplique: "<<J'ai effectué 96 missions! J'ai été descendu à chaque fois..quand j'y pense j'ai jamais atteri avec mon avion!>>",
+    question: "<<J'ai effectué 96 missions! J'ai été descendu à chaque fois..quand j'y pense j'ai jamais atteri avec mon avion!>>",
     reponses: ["Ace Ventura", "Hot Shot", "Y a-t-il un pilote dans l'avion ?"],
     bonne_reponse: 1,
   },
   {
     id: 2,
-    réplique: "<<Si je ne suis pas de retour dans 5 min.. Attendez plus longtemps !>>",
+    question: "<<Si je ne suis pas de retour dans 5 min.. Attendez plus longtemps !>>",
     reponses: ["The Mask", "Dogball", "Ace Ventura"],
     bonne_reponse: 2,
   },

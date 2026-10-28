@@ -32,6 +32,7 @@ fetch('questions.json')
   .then(response => response.json())
   .then(data => {
     questions = data
+    // console.log(questions)
     titreQuiz.textContent = 'AdaQuiz'
     descriptionQuiz.textContent = 'Ton quiz personnalisé'
     nbQuestions.textContent = questions.length + ' questions'
@@ -69,6 +70,12 @@ const afficher = (ecran) => {
 //      Chaque bouton doit appeler verifierReponse() au clic
 
 const afficherQuestion = () => {
+  console.log(questions.length + " questions")
+
+  questions.forEach((question, index) => {
+  console.log("Question " + (index + 1) + " : " + question.texte)
+  console.log("Bonne réponse : " + question.reponses[question.bonne_reponse])
+} )
   // Écris ton code ici
 }
 
