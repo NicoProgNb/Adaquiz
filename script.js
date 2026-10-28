@@ -10,7 +10,6 @@
 // Tu n'as pas besoin de les modifier.
 
 const btnCommencer = document.getElementById('btn-commencer')
-const btnSuivant = document.getElementById('btn-suivant')
 const btnRecommencer = document.getElementById('btn-recommencer')
 const ecranAccueil = document.getElementById('ecran-accueil')
 const ecranQuestion = document.getElementById('ecran-question')
@@ -57,7 +56,6 @@ btnCommencer.addEventListener("click", () =>{
   afficher(ecranQuestion)
 })
 
-
 // ════════════════════════════════════════════
 //   TODO — Fonctions à compléter
 // ════════════════════════════════════════════
@@ -76,25 +74,39 @@ btnCommencer.addEventListener("click", () =>{
 //   6. Vider #liste-reponses, puis créer un bouton pour chaque réponse
 //      Chaque bouton doit appeler verifierReponse() au clic
 
-const afficherQuestion = () => {
-  // Écris ton code ici
-}
+
+
 
 
 // ── TODO : verifierReponse ───────────────────
+
+const verifierReponse = (indexChoisi) => {
 // Cette fonction est appelée quand une apprenante clique sur une réponse.
 // Elle reçoit en paramètre l'index de la réponse choisie (0, 1, 2 ou 3).
 //
-// Ce qu'elle doit faire :
 //   1. Récupérer la question courante
 //   2. Désactiver tous les boutons de réponse
 //   3. Colorier en vert la bonne réponse (ajouter la classe "correcte")
 //   4. Si la réponse choisie est mauvaise, la colorier en rouge ("incorrecte")
 //   5. Si la réponse est bonne, incrémenter le score
 //   6. Afficher le bouton "Question suivante"
+    if (indexChoisi === questions[indexCourant].bonneReponse) {
+      reponses[indexChoisi].classList.add("correct")
+      score++
+    } else {
+      reponses[indexChoisi].textContent.classList.add("incorrect")
+    }
 
-const verifierReponse = (indexChoisi) => {
-  // Écris ton code ici
+    const btnSuivant = document.createElement("button")
+    btnSuivant.textContent ="SUIVANT"
+    document.getElementById("btn-suivant").appendChild(btnSuivant)
+
+    if (index === questions.length - 1) {
+        afficher(ecranResultats); 
+    } else {
+        index++; 
+        afficherQuestion(index); 
+    }
 }
 
 

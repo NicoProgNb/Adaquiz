@@ -2,29 +2,42 @@
    ADAQUIZ — style.css
 ════════════════════════════════════════════ */
 
-/* Layout */
+/* RAZ */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Layout */
+
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
+  background-image: linear-gradient(to right, rgb(65, 1, 51), rgb(155, 251, 12));
 }
 
-/* La classe .cache masque un écran */
-.cache {
-  display: none;
+section {
+  padding: 2rem;
+  border: 2px solid darkgrey;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px black;
+  background: white;
 }
 
 /* Header */
 
 h1 {
-  margin: 2rem auto;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-right: none;
+  border-left: none;
+  border-radius: 1rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  background: white;
 }
 
 /* Main */
@@ -36,14 +49,11 @@ main {
   align-items: center;
   gap: 2rem;
   margin: auto 3rem;
-  padding: 2rem;
-  border: 2px solid darkgrey;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px black;
 }
 
 img {
   width: 75vw;
+  margin-bottom: 2rem;
 }
 
 #ecran-accueil p:first-of-type {
@@ -56,22 +66,29 @@ img {
   text-align: center;
 }
 
+.parent_btn {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px black;
+}
+
 /* Footer */
 
-footer div {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 5rem;
-}
-
-
-button {
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 3px 3px black;
+  margin: 2rem;
+  font-weight: 900;
+  color: white;
 }
 
 /* Responsive 1024px */
@@ -86,4 +103,24 @@ button {
     margin: 5rem;
   }
 
+}
+
+/* Modif JS */
+
+/* La classe .cache masque un écran */
+.cache {
+  display: none;
+}
+
+/* Bonne réponse */
+.correct {
+  color:green ;
+  font-weight: 900;
+}
+
+/* Mauvaise réponse */
+
+.incorrect {
+  color: red;
+  font-weight: 900;
 }
