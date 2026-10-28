@@ -29,6 +29,7 @@
                         passer un bon moment en vous mettant à un défi mémoire.
                     </p>
                     <p>&#128513;</p>
+                    <p id="nb-questions"></p>
                 </div>
 
                 <div class="parent_btn">
@@ -54,7 +55,11 @@
                         <!-- li : Réponses -->
                     </ul>
                 </article>
-                <div id="btn-suivant">
+
+                <div class="parent_btn">
+                    <button id="btn-suivant" class="cache">
+                    SUIVANT
+                    </button>
                 </div>
             </section>
 
@@ -63,13 +68,12 @@
             Caché au départ. Affiché à la fin du quiz.
             ════════════════════════════════════════ -->
             <section id="ecran-resultats" class="ecran cache">
-                <p></p>
-                <!--SCORE-->
-                <p></p>
-                <!-- Message de SCORE -->
+                <p id="score"></p>
+                <p id="message-fin"></p>
+                <!-- Message de score -->
                 <div class="parent_btn">
                     <button id="btn-recommencer">
-                    COMMENCER
+                    RECOMMENCER
                     </button>
                 </div>
             </section>

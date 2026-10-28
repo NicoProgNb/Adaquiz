@@ -15,7 +15,7 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
-  background-image: linear-gradient(to right, rgb(65, 1, 51), rgb(155, 251, 12));
+  background: rgba(169, 158, 91, 0.474);
 }
 
 section {
@@ -61,8 +61,8 @@ img {
   text-align: center;
 }
 
-#ecran-accueil p:last-of-type {
-  margin-top: 2rem;
+#ecran-accueil p:nth-of-type(3) {
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -88,19 +88,22 @@ footer {
   gap: 1rem;
   margin: 2rem;
   font-weight: 900;
-  color: white;
 }
 
 /* Responsive 1024px */
 @media (width > 1024px) {
 
-  main {
+  #ecran-accueil:not(.cache) {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     margin: 5rem;
+  }
+
+  img {
+  width: 33vw;
   }
 
 }
@@ -114,13 +117,13 @@ footer {
 
 /* Bonne réponse */
 .correct {
-  color:green ;
-  font-weight: 900;
+  background-color: #4caf50; 
+  color: white;
 }
 
 /* Mauvaise réponse */
 
 .incorrect {
-  color: red;
-  font-weight: 900;
+  background-color: #e53935; 
+  color: white;
 }
