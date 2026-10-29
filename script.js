@@ -10,8 +10,15 @@
 // Tu n'as pas besoin de les modifier.
 
 const btnCommencer = document.getElementById('btn-commencer')
-const btnSuivant = document.getElementById('btn-suivant')
 const btnRecommencer = document.getElementById('btn-recommencer')
+const ecranAccueil = document.getElementById('ecran-accueil')
+const ecranQuestion = document.getElementById('ecran-question')
+const ecranResultats = document.getElementById('ecran-resultats')
+const nbQuestions = document.getElementById('nb-questions')
+const scoreFinal = document.getElementById('score')
+const messageFin = document.getElementById('message-fin')
+const btnSuivant = document.getElementById('btn-suivant')
+
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
 
@@ -32,9 +39,6 @@ fetch('questions.json')
   .then(response => response.json())
   .then(data => {
     questions = data
-    // console.log(questions)
-    titreQuiz.textContent = 'AdaQuiz'
-    descriptionQuiz.textContent = 'Ton quiz personnalisé'
     nbQuestions.textContent = questions.length + ' questions'
   })
 
@@ -49,7 +53,6 @@ const afficher = (ecran) => {
   ecranResultats.classList.add('cache')
   ecran.classList.remove('cache')
 }
-
 
 // ════════════════════════════════════════════
 //   TODO — Fonctions à compléter
@@ -69,44 +72,80 @@ const afficher = (ecran) => {
 //   6. Vider #liste-reponses, puis créer un bouton pour chaque réponse
 //      Chaque bouton doit appeler verifierReponse() au clic
 
-const afficherQuestion = () => {
-  console.log(questions.length + " questions")
 
-  questions.forEach((question, index) => {
-  console.log("Question " + (index + 1) + " : " + question.texte)
-  console.log("Bonne réponse : " + question.reponses[question.bonne_reponse])
-} )
-  // Écris ton code ici
-}
+
 
 
 // ── TODO : verifierReponse ───────────────────
-// Cette fonction est appelée quand une apprenante clique sur une réponse.
-// Elle reçoit en paramètre l'index de la réponse choisie (0, 1, 2 ou 3).
-//
-// Ce qu'elle doit faire :
-//   1. Récupérer la question courante
-//   2. Désactiver tous les boutons de réponse
-//   3. Colorier en vert la bonne réponse (ajouter la classe "correcte")
-//   4. Si la réponse choisie est mauvaise, la colorier en rouge ("incorrecte")
-//   5. Si la réponse est bonne, incrémenter le score
-//   6. Afficher le bouton "Question suivante"
 
 const verifierReponse = (indexChoisi) => {
-  // Écris ton code ici
-}
+// Cette fonction est appelée quand une apprenante clique sur une réponse.
+// Elle reçoit en paramètre l'index de la réponse choisie (0, 1, 2 ou 3).
 
+  const reponses = document.querySelectorAll('#reponse button')
+//   1. Récupérer la question courante
+  const questionCourante = questions[indexCourant]
+  const indexBonneReponse = questionCourante.bonneReponse
+
+//   2. Désactiver tous les boutons de réponse
+  reponses.forEach(bouton => {
+    bouton.disabled = true
+  });
+
+//   3. Colorier en vert la bonne réponse (ajouter la classe "correcte")
+  reponses[indexBonneReponse].classList.add("correct")
+
+//   4. Si la réponse choisie est mauvaise, la colorier en rouge ("incorrecte")
+  if (indexChoisi !== questions[indexCourant].bonneReponse) {
+    reponses[indexChoisi].classList.add("incorrect")
+    } else {
+//   5. Si la réponse est bonne, incrémenter le score
+    score++
+  }
+
+//   6. Afficher le bouton "Question suivante"
+  const suivant = document.getElementById("btn-suivant")
+  suivant.classList.remove("cache")
+
+// Cache à nouveau btn-suivant
+  suivant.onclick = () => {
+    suivant.classList.add("cache")
+
+// Choix de l'action btn-suivant : Question suivante ou page de résultat
+    if (indexCourant === questions.length - 1) {
+        afficher(ecranResultats); 
+    } else {
+        indexCourant++; 
+        afficherQuestion(indexCourant); 
+    }
+  }
+}
 
 // ── TODO : afficherResultats ─────────────────
 // Cette fonction est appelée quand toutes les questions ont été répondues.
 //
 // Ce qu'elle doit faire :
-//   1. Afficher le score dans #score-final (ex. "4 / 7")
-//   2. Afficher un message dans #message-fin selon le score
-//   3. Appeler afficher(ecranResultats) pour passer à l'écran résultats
 
 const afficherResultats = () => {
-  // Écris ton code ici
+
+//   1. Afficher le score dans #score-final (ex. "4 / 7")
+  scoreFinal.textContent = `${score} / ${questions.length}`
+
+//   2. Afficher un message dans #message-fin selon le score
+  let message = ""
+
+  if (score === questions.length) {
+    message = "Trop fort !"
+  } else if (score >= questions.length / 2) {
+    message = "Pas mal... tu connais tes classiques ! "
+  } else {
+    message = "Bon... t'es pas très doué mais on t'aime bien quand même"
+  }
+
+  messageFin.textContent = message
+
+//   3. Appeler afficher(ecranResultats) pour passer à l'écran résultats
+  afficher(ecranResultats)
 }
 
 
@@ -114,8 +153,19 @@ const afficherResultats = () => {
 // Branche les boutons sur les bonnes fonctions.
 //
 // À faire :
+
 //   - btn-commencer → afficher l'écran question + appeler afficherQuestion()
+btnCommencer.addEventListener("click", () =>{
+  afficher(ecranQuestion)
+})
+
 //   - btn-suivant   → passer à la question suivante ou aux résultats
+
+
 //   - btn-rejouer   → remettre indexCourant et score à 0, revenir à l'accueil
 
-// Écris ton code ici
+btnCommencer.addEventListener("click", () =>{
+  indexCourant =0
+  score = 0
+  afficher(ecranQuestion)
+})

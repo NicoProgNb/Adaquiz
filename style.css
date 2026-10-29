@@ -2,29 +2,42 @@
    ADAQUIZ — style.css
 ════════════════════════════════════════════ */
 
-/* Layout */
+/* RAZ */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Layout */
+
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
+  background: rgba(169, 158, 91, 0.474);
 }
 
-/* La classe .cache masque un écran */
-.cache {
-  display: none;
+section {
+  padding: 2rem;
+  border: 2px solid darkgrey;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px black;
+  background: white;
 }
 
 /* Header */
 
 h1 {
-  margin: 2rem auto;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-right: none;
+  border-left: none;
+  border-radius: 1rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  background: white;
 }
 
 /* Main */
@@ -36,14 +49,11 @@ main {
   align-items: center;
   gap: 2rem;
   margin: auto 3rem;
-  padding: 2rem;
-  border: 2px solid darkgrey;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px black;
 }
 
 img {
   width: 75vw;
+  margin-bottom: 2rem;
 }
 
 #ecran-accueil p:first-of-type {
@@ -51,33 +61,39 @@ img {
   text-align: center;
 }
 
-#ecran-accueil p:last-of-type {
-  margin-top: 2rem;
+#ecran-accueil p:nth-of-type(3) {
+  margin: 1rem auto;
   text-align: center;
 }
 
-/* Footer */
-
-footer div {
+.parent_btn {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 5rem;
 }
 
-
 button {
+  margin: 1rem auto;
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 3px 3px black;
 }
 
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  font-weight: 900;
+}
+
 /* Responsive 1024px */
 @media (width > 1024px) {
 
-  main {
+  #ecran-accueil:not(.cache) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -86,4 +102,28 @@ button {
     margin: 5rem;
   }
 
+  img {
+  width: 33vw;
+  }
+
+}
+
+/* Modif JS */
+
+/* La classe .cache masque un écran */
+.cache {
+  display: none;
+}
+
+/* Bonne réponse */
+.correct {
+  background-color: #4caf50; 
+  color: white;
+}
+
+/* Mauvaise réponse */
+
+.incorrect {
+  background-color: #e53935; 
+  color: white;
 }
