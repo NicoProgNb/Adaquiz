@@ -78,6 +78,21 @@ button {
   box-shadow: 3px 3px black;
 }
 
+/* Main - ecranQuestion */
+
+#progress-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
 /* Footer */
 
 footer {
