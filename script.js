@@ -12,15 +12,19 @@
 const btnCommencer = document.getElementById('btn-commencer')
 const btnRecommencer = document.getElementById('btn-recommencer')
 const btnSuivant = document.getElementById('btn-suivant')
+
 const ecranAccueil = document.getElementById('ecran-accueil')
 const ecranQuestion = document.getElementById('ecran-question')
 const ecranResultats = document.getElementById('ecran-resultats')
+
 const nbQuestions = document.getElementById('nb-questions')
 const texteQuestion = document.getElementById('texte-question')
 const listeReponses = document.getElementById('liste-reponses')
+
 const counterElement = document.getElementById('counter')
 const progressBar = document.getElementById('my-progress')
 const progressText = document.getElementById('progress-text')
+
 const scoreFinal = document.getElementById('score')
 const messageFin = document.getElementById('message-fin')
 
@@ -72,19 +76,16 @@ const afficher = (ecran) => {
 const afficherQuestion = () => {
 
 //   1. Récupérer la question courante : questions[indexCourant]
-
   const questionCourante = questions[indexCourant]
 
 //   2. Mettre à jour la barre de progression
-  const questionActuelle = indexCourant + 1
+  const questionActuelle = indexCourant +1
   const totalQuestions = questions.length
-
-// Calcul du palier en pourcentage
   const pourcentage = Math.round((questionActuelle / totalQuestions) * 100)
 
-// Mise à jour de la barre et du texte de progression
-  if (progressBar) progressBar.value = pourcentage
-  if (progressText) progressText.textContent = pourcentage
+// MAJ de la barre et du texte de progression
+  progressBar.value = pourcentage
+  progressText.textContent = pourcentage
 
 
 //   3. Mettre à jour le compteur ("Question X / Y")
@@ -105,7 +106,6 @@ const afficherQuestion = () => {
   questionCourante.reponses.forEach((rep, index) => {
     const li = document.createElement('li')
     li.textContent = rep
-
     li.addEventListener('click', () => {
     verifierReponse(index)
     })
