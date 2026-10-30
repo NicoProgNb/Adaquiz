@@ -102,28 +102,46 @@ text-align: center;
 }
 
 #texte-question {
-  margin: 2rem;
+  margin: 1rem;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 
 #liste-reponses {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 1rem;
 }
 
 #liste-reponses li {
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 1rem 3rem;
+  padding: 2rem 10%;
   list-style: none;
   border: 1px solid black;
   border-radius: 3rem;
 }
 
 #liste-reponses li:hover {
+  font-weight: 600;
+}
+
+/* Main - ecranResultats */
+
+#score {
+  margin: 1rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+#message-fin {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -166,6 +184,7 @@ footer {
 
 /* Bonne réponse */
 .correct {
+  box-shadow: 2px 2px black;
   background-color: #4caf50; 
   color: white;
   font-weight: 900;
@@ -174,6 +193,8 @@ footer {
 /* Mauvaise réponse */
 
 .incorrect {
+  box-shadow: 2px 2px black;
   background-color: #e53935; 
   color: white;
+  font-weight: 900;
 }

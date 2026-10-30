@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "question": "<<J'ai effectué 96 missions! J'ai été descendu à chaque fois..quand j'y pense j'ai jamais atteri avec mon avion!>>",
+    "question": "<< J'ai effectué 96 missions! J'ai été descendu à chaque fois..quand j'y pense j'ai jamais atteri avec mon avion! >>",
     "reponses": ["Ace Ventura", "Hot Shot", "Y a-t-il un pilote dans l'avion ?"],
     "bonneReponse": 1
   },
   {
     "id": 2,
-    "question": "<<Si je ne suis pas de retour dans 5 min.. Attendez plus longtemps !>>",
+    "question": "<< Si je ne suis pas de retour dans 5 min.. Attendez plus longtemps ! >>",
     "reponses": ["The Mask", "Dogball", "Ace Ventura"],
     "bonneReponse": 2
   },
   {
     "id": 3,
-    "question": "<<Meurs, pourriture communiste !>>",
+    "question": "<< Meurs, pourriture communiste ! >>",
     "reponses": ["Le Dîner de cons", "La citée de la peur", "OSS 117 Le Cair nid d'espion"],
     "bonneReponse": 1
   },
   {
     "id": 4,
-    "question": "<<J'emmène pas la clocharde ! Ma voiture c'est pas l'arche de Noé !>>",
+    "question": "<< J'emmène pas la clocharde ! Ma voiture c'est pas l'arche de Noé ! >>",
     "reponses": ["Le père Noël est une ordure", "Taxi", "Les visiteurs"],
     "bonneReponse": 0
   },
   {
     "id": 5,
-    "question": "<<Mais vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation>>",
+    "question": "<< Mais vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation >>",
     "reponses": ["Astérix et Obélix: Mission Cléopatre", "Les bronzés", "Les Anges gardiens"],
     "bonneReponse": 0
   },
