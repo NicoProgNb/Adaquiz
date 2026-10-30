@@ -40,7 +40,7 @@ h1 {
   background: white;
 }
 
-/* Main */
+/* Main - Toutes sections */
 
 main {
   display: flex;
@@ -64,20 +64,13 @@ img {
 #ecran-accueil p:nth-of-type(3) {
   margin: 1rem auto;
   text-align: center;
+  font-size: 3rem;
 }
 
 #ecran-accueil p:last-of-type {
   margin: 1rem auto;
   text-align: center;
-  border: 1px solid black;
 }
-
-#ecran-accueil p:last-of-type {
-  margin: 1rem auto;
-  text-align: center;
-  border: 1px solid black;
-}
-
 
 .parent_btn {
   display: flex;
@@ -85,26 +78,54 @@ img {
 }
 
 button {
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 3px 3px black;
+  box-shadow: 1px 3px black;
+  font-weight: 900;
+}
+
+button:hover {
+  box-shadow: -1px 3px black;
 }
 
 /* Main - ecranQuestion */
 
+#counter {
+text-align: center;
+}
+
 #progress-container {
   display: flex;
   justify-content: center;
+  margin: 0.5rem;
 }
 
+#texte-question {
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
 
+#liste-reponses {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 1rem;
+}
 
+#liste-reponses li {
+  margin: 1rem auto;
+  padding: 1rem;
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 3rem;
+}
 
-
-
-
-
+#liste-reponses li:hover {
+  font-weight: 600;
+}
 
 /* Footer */
 
@@ -147,6 +168,7 @@ footer {
 .correct {
   background-color: #4caf50; 
   color: white;
+  font-weight: 900;
 }
 
 /* Mauvaise réponse */
