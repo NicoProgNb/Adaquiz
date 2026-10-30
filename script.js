@@ -11,13 +11,23 @@
 
 const btnCommencer = document.getElementById('btn-commencer')
 const btnRecommencer = document.getElementById('btn-recommencer')
+const btnSuivant = document.getElementById('btn-suivant')
+
 const ecranAccueil = document.getElementById('ecran-accueil')
 const ecranQuestion = document.getElementById('ecran-question')
 const ecranResultats = document.getElementById('ecran-resultats')
+
 const nbQuestions = document.getElementById('nb-questions')
+const texteQuestion = document.getElementById('texte-question')
+const listeReponses = document.getElementById('liste-reponses')
+
+const counterElement = document.getElementById('counter')
+const progressBar = document.getElementById('my-progress')
+const progressText = document.getElementById('progress-text')
+
 const scoreFinal = document.getElementById('score')
 const messageFin = document.getElementById('message-fin')
-const btnSuivant = document.getElementById('btn-suivant')
+
 
 //... Crée autant de constantes que d'éléments HTML à récupérer
 
@@ -58,23 +68,50 @@ const afficher = (ecran) => {
 //   TODO — Fonctions à compléter
 // ════════════════════════════════════════════
 
-
 // ── TODO : afficherQuestion ──────────────────
 // Cette fonction doit afficher la question en cours.
 // Elle est appelée au début de chaque nouvelle question.
 //
-// Ce qu'elle doit faire :
+
+const afficherQuestion = () => {
+
 //   1. Récupérer la question courante : questions[indexCourant]
+  const questionCourante = questions[indexCourant]
+
 //   2. Mettre à jour la barre de progression
+  const questionActuelle = indexCourant +1
+  const totalQuestions = questions.length
+  const pourcentage = Math.round((questionActuelle / totalQuestions) * 100)
+
+// MAJ de la barre et du texte de progression
+  progressBar.value = pourcentage
+  progressText.textContent = pourcentage
+
+
 //   3. Mettre à jour le compteur ("Question X / Y")
+  if (counterElement) {
+    counterElement.textContent = `Question ${questionActuelle} / ${totalQuestions}`
+  }
+
 //   4. Afficher le texte de la question dans #texte-question
+  texteQuestion.textContent = questionCourante.question
+
 //   5. Cacher le bouton "Question suivante"
+  btnSuivant.classList.add('cache')
+
 //   6. Vider #liste-reponses, puis créer un bouton pour chaque réponse
 //      Chaque bouton doit appeler verifierReponse() au clic
+  listeReponses.innerHTML = "" // Vide la liste
 
-
-
-
+  questionCourante.reponses.forEach((rep, index) => {
+    const li = document.createElement('li')
+    li.textContent = rep
+    li.addEventListener('click', () => {
+    verifierReponse(index)
+    })
+    listeReponses.appendChild(li)
+  })
+}
 
 // ── TODO : verifierReponse ───────────────────
 
@@ -82,14 +119,14 @@ const verifierReponse = (indexChoisi) => {
 // Cette fonction est appelée quand une apprenante clique sur une réponse.
 // Elle reçoit en paramètre l'index de la réponse choisie (0, 1, 2 ou 3).
 
-  const reponses = document.querySelectorAll('#reponse button')
+  const reponses = document.querySelectorAll('#liste-reponses li')
 //   1. Récupérer la question courante
   const questionCourante = questions[indexCourant]
   const indexBonneReponse = questionCourante.bonneReponse
 
 //   2. Désactiver tous les boutons de réponse
-  reponses.forEach(bouton => {
-    bouton.disabled = true
+  reponses.forEach(li => {
+    li.style.pointerEvents = 'none'
   });
 
 //   3. Colorier en vert la bonne réponse (ajouter la classe "correcte")
@@ -104,21 +141,7 @@ const verifierReponse = (indexChoisi) => {
   }
 
 //   6. Afficher le bouton "Question suivante"
-  const suivant = document.getElementById("btn-suivant")
-  suivant.classList.remove("cache")
-
-// Cache à nouveau btn-suivant
-  suivant.onclick = () => {
-    suivant.classList.add("cache")
-
-// Choix de l'action btn-suivant : Question suivante ou page de résultat
-    if (indexCourant === questions.length - 1) {
-        afficher(ecranResultats); 
-    } else {
-        indexCourant++; 
-        afficherQuestion(indexCourant); 
-    }
-  }
+  btnSuivant.classList.remove('cache')
 }
 
 // ── TODO : afficherResultats ─────────────────
@@ -156,16 +179,27 @@ const afficherResultats = () => {
 
 //   - btn-commencer → afficher l'écran question + appeler afficherQuestion()
 btnCommencer.addEventListener("click", () =>{
+  indexCourant = 0
+  score = 0
   afficher(ecranQuestion)
+  afficherQuestion()
 })
 
 //   - btn-suivant   → passer à la question suivante ou aux résultats
 
+btnSuivant.addEventListener('click', () => {
+  if (indexCourant === questions.length - 1) {
+    afficherResultats()
+  } else {
+    indexCourant++
+    afficherQuestion()
+  }
+})
 
 //   - btn-rejouer   → remettre indexCourant et score à 0, revenir à l'accueil
 
-btnCommencer.addEventListener("click", () =>{
+btnRecommencer.addEventListener("click", () =>{
   indexCourant =0
   score = 0
-  afficher(ecranQuestion)
+  afficher(ecranAccueil)
 })

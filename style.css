@@ -66,6 +66,19 @@ img {
   text-align: center;
 }
 
+#ecran-accueil p:last-of-type {
+  margin: 1rem auto;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#ecran-accueil p:last-of-type {
+  margin: 1rem auto;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
 .parent_btn {
   display: flex;
   justify-content: center;
@@ -77,6 +90,21 @@ button {
   border-radius: 1rem;
   box-shadow: 3px 3px black;
 }
+
+/* Main - ecranQuestion */
+
+#progress-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
 
 /* Footer */
 

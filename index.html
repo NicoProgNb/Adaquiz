@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Répliques</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css"/>
         <script src="script.js" defer></script>
     </head>
 
@@ -19,7 +19,9 @@
             Affiché au départ. Caché quand on clique sur "Commencer".
             ════════════════════════════════════════ -->
             <section id="ecran-accueil" class="ecran">
+
                 <img src="./images/OSS117.jpg" alt="Image de l'accueil" />
+
                 <div>
                     <p>Bienvenue ce sur petit test orienté humour.</p>
                     <p>
@@ -36,6 +38,7 @@
                     COMMENCER
                     </button>
                 </div>
+
             </section>
 
             <!-- ═══════════════════════════════════════
@@ -43,15 +46,17 @@
             Caché au départ. Affiché pendant le quiz.
             ════════════════════════════════════════ -->
             <section id="ecran-question" class="ecran cache">
+
                 <div class="progress-container">
                     <label for="my-progress">Progression <span id="progress-text">0</span>%</label>
                     <progress id="my-progress" value="0" max="100"></progress>
                 </div>
-                <h2 id="question"></h2>
-                <!--QUESTION-->
+
+                <h2 id="texte-question"></h2>
+                <p id="counter"></p>
+
                 <article>
-                    <ul id="reponse">
-                        <!-- li : Réponses -->
+                    <ul id="liste-reponses">
                     </ul>
                 </article>
 
@@ -60,6 +65,7 @@
                     SUIVANT
                     </button>
                 </div>
+
             </section>
 
             <!-- ═══════════════════════════════════════
@@ -67,15 +73,18 @@
             Caché au départ. Affiché à la fin du quiz.
             ════════════════════════════════════════ -->
             <section id="ecran-resultats" class="ecran cache">
+
                 <p id="score"></p>
                 <p id="message-fin"></p>
-                <!-- Message de score -->
+
                 <div class="parent_btn">
                     <button id="btn-recommencer">
                     RECOMMENCER
                     </button>
                 </div>
+
             </section>
+
         </main>
 
         <footer>
