@@ -23,7 +23,6 @@ const listeReponses = document.getElementById('liste-reponses')
 
 const counterElement = document.getElementById('counter')
 const progressBar = document.getElementById('my-progress')
-const progressText = document.getElementById('progress-text')
 
 const scoreFinal = document.getElementById('score')
 const messageFin = document.getElementById('message-fin')
@@ -85,7 +84,7 @@ const afficherQuestion = () => {
 
 // MAJ de la barre et du texte de progression
   progressBar.value = pourcentage
-  progressText.textContent = pourcentage
+
 
 
 //   3. Mettre à jour le compteur ("Question X / Y")
