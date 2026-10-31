@@ -1,29 +1,27 @@
-# AdaQuiz — Projet de départ
+# AdaQuiz — Connaissez vos répliques
 
-Bienvenue sur le projet de départ AdaQuiz ! Ce repo contient la structure de base du quiz. À vous de le compléter.
+## Equipe de dev : Fab & Nico
 
-## Ce qui est déjà fait
+Thème choisi : Humour/devinette
 
-- `index.html` — la structure de base avec les 3 sections à compléter
-- `style.css` — uniquement la classe .cache (permettant de cacher des écrans dynamiquement grâce au JS)
-- `script.js` — le chargement du JSON et la navigation entre écrans
+Hebergeur gitHub : Nico
 
-## Ce que vous devez faire
+## Utilisation
 
-1. **Compléter `index.html` et `style.css`** pour créer le squelette du site, sans JavaScript
-2. **Compléter `questions.json`** avec au moins 5 questions (voir le brief pour le format)
-3. **Compléter les fonctions** marquées `TODO` dans `script.js` :
-   - `afficherQuestion()`
-   - `verifierReponse(indexChoisi)`
-   - `afficherResultats()`
-   - Les écouteurs d'événements en bas du fichier
+Cloner sur gitHub via une de ces clefs : 
 
-## Lancer le projet en local
+- HTTPS : https://github.com/NicoProgNb/Adaquiz.git
 
-```bash
-npx live-server
-```
+- SSH : git@github.com:NicoProgNb/Adaquiz.git
 
-Ouvrir ensuite `http://localhost:8080`.
+Ouvrir le .html via vsCode > Activer l'extention Live > Profiter
 
-> ⚠️ Ne pas ouvrir `index.html` directement dans le navigateur — `fetch` ne fonctionne pas sans serveur local.
+## Ajouter/modifier des questions
+
+Ouvrir le .json via vsCode > Modifier le texte sans toucher à la mise en page. 
+
+## Points améliorables
+
+- Ajouter des animations
+
+- Nommer les branch comme les issues du kanban pour des commit/pull request plus propres
