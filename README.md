@@ -25,3 +25,5 @@ Ouvrir le .json via vsCode > Modifier le texte sans toucher à la mise en page.
 - Ajouter des animations
 
 - Nommer les branch comme les issues du kanban pour des commit/pull request plus propres
+
+- test git
