@@ -28,3 +28,4 @@ Ouvrir le .json via vsCode > Modifier le texte sans toucher à la mise en page.
 
 ## Lien de déploiement
 adaquiz-5ueo.netlify.app/
+https://agent-6b0442c8746b35907321e323--adaquifab.netlify.app/
